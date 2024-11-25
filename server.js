@@ -9,10 +9,14 @@ app.listen(process.env.PORT, () => {
 }); // to start the server
 
 // sample data
-let books = [
-  { id: 1, title: "1984", author: "George Orwell" },
-  { id: 2, title: "To Kill a Mockingbird", author: "Harper Lee" },
+const mockData = [
+  { id: 1, name: "Product A", price: 10 },
+  { id: 2, name: "Product B", price: 20 },
+  { id: 3, name: "Product C", price: 30 },
 ];
+
+// use mockData as the books array
+let books = mockData; // Change 'books' to 'mockData'
 
 // to create a new book
 app.post("/books", (req, res) => {
